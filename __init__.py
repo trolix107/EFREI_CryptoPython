@@ -10,7 +10,11 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     return render_template('hello.html') # hh
-
+  
+@app.route('/exercice1')
+def exo1():
+     return render_template('exercice1.html')
+  
 key = Fernet.generate_key()
 f = Fernet(key)
 
