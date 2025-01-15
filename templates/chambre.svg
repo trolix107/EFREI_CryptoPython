@@ -1,1 +1,24 @@
+  <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+        <!-- Mur de la chambre -->
+        <rect x="0" y="0" width="600" height="400" fill="lightblue" />
 
+        <!-- Sol -->
+        <rect x="0" y="300" width="600" height="100" fill="saddlebrown" />
+
+        <!-- Lit -->
+        <rect x="150" y="180" width="300" height="100" fill="gray" />
+        <rect x="150" y="190" width="300" height="20" fill="white" />
+        <rect x="170" y="210" width="60" height="50" fill="darkblue" />
+
+        <!-- Table de chevet -->
+        <rect x="460" y="220" width="40" height="40" fill="saddlebrown" />
+        <circle cx="480" cy="250" r="8" fill="yellow" />
+
+        <!-- Fenêtre -->
+        <rect x="50" y="50" width="100" height="100" fill="skyblue" stroke="black" stroke-width="4" />
+        <line x1="100" y1="50" x2="100" y2="150" stroke="black" stroke-width="4" />
+        <line x1="50" y1="100" x2="150" y2="100" stroke="black" stroke-width="4" />
+
+        <!-- Tapis -->
+        <rect x="200" y="270" width="200" height="30" fill="darkred" />
+    </svg>
