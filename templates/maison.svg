@@ -5,6 +5,9 @@
   <!-- Draw the roof -->
   <polygon points="150,200 250,100 350,200" fill="#FF6347" stroke="black" stroke-width="2" />
 
+  <!-- Draw the chimney -->
+  <rect x="280" y="130" width="30" height="50" fill="#8B4513" stroke="black" stroke-width="2" />
+
   <!-- Draw the door -->
   <rect x="230" y="300" width="40" height="100" fill="#8B4513" stroke="black" stroke-width="2" />
 
