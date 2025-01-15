@@ -9,7 +9,7 @@ app = Flask(__name__)
                                                                                                                                        
 @app.route('/')
 def hello_world():
-    return render_template('maison.svg') # hh
+    return render_template('jocker.svg')
   
 key = Fernet.generate_key()
 f = Fernet(key)
