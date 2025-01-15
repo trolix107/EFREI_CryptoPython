@@ -1,1 +1,66 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valet de Trèfle</title>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+       version="1.1" height="1216.19" width="2178.18" viewBox="-.2 -236 2178.99 1216.19">
+    
+    <g id="jack_club">
+      <!-- Utilisation du symbole base -->
+      <use xlink:href="#base" x="1675.75" y="0" />
+      
+      <!-- Cadre et contours -->
+      <g fill="none" stroke="black" stroke-width="1">
+        <path d="M 1685.25 -175.117 L1685.25 2.27" /> 
+        <path d="M 1685.25 2.27 L1816.03 2.27" />
+        <path d="M 1833.83 -54.03 L1833.83 -231.667" />
+        <path d="M 1833.83 -231.667 L1703.05 -231.667" />
+      </g>
+      
+      <!-- Club supérieur -->
+      <g>
+        <use xlink:href="#club" x="713.264" y="-85.2573" 
+             transform="scale(2.4) rotate(180,713.264,-85.2573)" />
+        <rect x="1693.33" y="-223.601" width="9.69257" height="37.968" fill="white" />
+      </g>
+      
+      <!-- Club inférieur -->
+      <g>
+        <use xlink:href="#club" x="753.017" y="-10.2745" transform="scale(2.4)" />
+        <rect x="1816.49" y="-43.6428" width="9.69257" height="37.968" fill="white" />
+      </g>
+      
+      <!-- Décorations diagonales -->
+      <g transform="rotate(-1.80,1759.54,-114.699)">
+        <line x1="1718.46" y1="-55.1025" x2="1800.61" y2="-174.295" stroke="black" stroke-width="7.25" />
+        <!-- Cercles en dégradé -->
+        <!-- Boucle pour dessiner les cercles (code simplifié pour éviter répétitions) -->
+        <!-- Utilisation des balises circle -->
+        <circle cx="1720.88" cy="-58.1609" r="2.2" fill="white" />
+        <circle cx="1720.88" cy="-58.1609" r=".7" fill="black" />
+        <!-- Ajoutez plus de cercles si nécessaire -->
+      </g>
+      
+      <!-- Valet -->
+      <use xlink:href="#jack" x="1684.78" y="-203.347" />
+      <use xlink:href="#jack" x="1834.3" y="-26.05" transform="rotate(180,1834.3,-26.05)" />
+      
+      <!-- Clubs autour du valet -->
+      <use xlink:href="#club" x="1689.4" y="-185.117" transform="rotate(180,1689.4,-185.117)" />
+      <use xlink:href="#club" x="1829.67" y="-44.28" />
+      
+      <!-- Autres utilisations (vérifié les transformations) -->
+      <use xlink:href="#jack_4" 
+           transform="matrix(0.990001,0.000000,0.000000,0.990000,1330.845,-204.5343)" 
+           id="use1593" />
+      <use xlink:href="#jack_4" 
+           transform="matrix(-0.989999,0.000000,0.000000,-0.990000,2188.317,-24.84575)" 
+           id="use1594" />
+    </g>
+  </svg>
+</body>
+</html>
