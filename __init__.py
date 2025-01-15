@@ -9,7 +9,7 @@ app = Flask(__name__)
                                                                                                                                        
 @app.route('/')
 def hello_world():
-    return render_template('manette.svg')
+    return render_template('maison.svg')
 
 @app.route('/jack')
 def exo_jack():
