@@ -1,24 +1,14 @@
- <svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-        <!-- Cadre du lit -->
-        <rect x="100" y="100" width="400" height="150" fill="saddlebrown" stroke="black" stroke-width="4" />
+<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg">
+    <!-- Couverture du livre -->
+    <rect x="10" y="10" width="180" height="130" fill="saddlebrown" stroke="black" stroke-width="2" />
+    
+    <!-- Pages du livre -->
+    <rect x="15" y="15" width="170" height="120" fill="white" stroke="black" stroke-width="1" />
 
-        <!-- Matelas -->
-        <rect x="110" y="110" width="380" height="130" fill="lightgray" stroke="black" stroke-width="2" />
-
-        <!-- Oreillers -->
-        <rect x="120" y="120" width="100" height="30" fill="white" stroke="black" stroke-width="2" />
-        <rect x="230" y="120" width="100" height="30" fill="white" stroke="black" stroke-width="2" />
-
-        <!-- Couverture -->
-        <rect x="110" y="140" width="380" height="100" fill="lightblue" stroke="black" stroke-width="2" />
-
-        <!-- Pieds du lit -->
-        <rect x="130" y="250" width="20" height="20" fill="saddlebrown" />
-        <rect x="190" y="250" width="20" height="20" fill="saddlebrown" />
-        <rect x="310" y="250" width="20" height="20" fill="saddlebrown" />
-        <rect x="370" y="250" width="20" height="20" fill="saddlebrown" />
-
-        <!-- Détails du matelas (coutures) -->
-        <line x1="120" y1="145" x2="480" y2="145" stroke="black" stroke-width="2" />
-        <line x1="120" y1="175" x2="480" y2="175" stroke="black" stroke-width="2" />
-    </svg>
+    <!-- Détail des pages -->
+    <line x1="15" y1="35" x2="185" y2="35" stroke="black" stroke-width="1" />
+    <line x1="15" y1="55" x2="185" y2="55" stroke="black" stroke-width="1" />
+    <line x1="15" y1="75" x2="185" y2="75" stroke="black" stroke-width="1" />
+    <line x1="15" y1="95" x2="185" y2="95" stroke="black" stroke-width="1" />
+    <line x1="15" y1="115" x2="185" y2="115" stroke="black" stroke-width="1" />
+</svg>
