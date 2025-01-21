@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afficher les images</title>
+    <script>
+        // Fonction pour afficher ou cacher les images en fonction des cases cochées
+        function toggleImage(imageId, checkboxId) {
+            var image = document.getElementById(imageId);
+            var checkbox = document.getElementById(checkboxId);
 
+            // Vérifie si la case est cochée ou non
+            if (checkbox.checked) {
+                image.style.display = "block"; // Affiche l'image si la case est cochée
+            } else {
+                image.style.display = "none"; // Cache l'image si la case est décochée
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Afficher des images avec des cases à cocher</h1>
+    
+    <!-- Case à cocher pour afficher l'image 1 -->
+    <label for="checkbox1">Afficher l'image 1</label>
+    <input type="checkbox" id="checkbox1" onclick="toggleImage('image1', 'checkbox1')">
+    <br>
+
+    <!-- Image 1 -->
+    <img id="image1" src="https://via.placeholder.com/150" alt="Image 1" style="display: none;">
+    <br>
+
+    <!-- Case à cocher pour afficher l'image 2 -->
+    <label for="checkbox2">Afficher l'image 2</label>
+    <input type="checkbox" id="checkbox2" onclick="toggleImage('image2', 'checkbox2')">
+    <br>
+
+    <!-- Image 2 -->
+    <img id="image2" src="https://via.placeholder.com/150" alt="Image 2" style="display: none;">
+    <br>
+
+    <!-- Case à cocher pour afficher l'image 3 -->
+    <label for="checkbox3">Afficher l'image 3</label>
+    <input type="checkbox" id="checkbox3" onclick="toggleImage('image3', 'checkbox3')">
+    <br>
+
+    <!-- Image 3 -->
+    <img id="image3" src="https://via.placeholder.com/150" alt="Image 3" style="display: none;">
+    
+</body>
+</html>
