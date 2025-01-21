@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function lancer() {
+      // Génère une valeur aléatoire entre 1 et 6
+      var Val = Math.floor(Math.random() * 6) + 1;
+
+      // Réinitialise tous les cercles (les cache)
+      for (var i = 1; i <= 7; i++) {
+        document.getElementById('C' + i).style.display = 'none';
+      }
+
+      // Affiche les cercles correspondant à la face du dé
+      switch (Val) {
+        case 1:
+          document.getElementById('C4').style.display = 'block'; // Centre
+          break;
+        case 2:
+          document.getElementById('C1').style.display = 'block'; // Haut-gauche
+          document.getElementById('C7').style.display = 'block'; // Bas-droit
+          break;
+        case 3:
+          document.getElementById('C1').style.display = 'block'; // Haut-gauche
+          document.getElementById('C4').style.display = 'block'; // Centre
+          document.getElementById('C7').style.display = 'block'; // Bas-droit
+          break;
+        case 4:
+          document.getElementById('C1').style.display = 'block'; // Haut-gauche
+          document.getElementById('C3').style.display = 'block'; // Haut-droit
+          document.getElementById('C5').style.display = 'block'; // Bas-gauche
+          document.getElementById('C7').style.display = 'block'; // Bas-droit
+          break;
+        case 5:
+          document.getElementById('C1').style.display = 'block'; // Haut-gauche
+          document.getElementById('C3').style.display = 'block'; // Haut-droit
+          document.getElementById('C4').style.display = 'block'; // Centre
+          document.getElementById('C5').style.display = 'block'; // Bas-gauche
+          document.getElementById('C7').style.display = 'block'; // Bas-droit
+          break;
+        case 6:
+          document.getElementById('C1').style.display = 'block'; // Haut-gauche
+          document.getElementById('C2').style.display = 'block'; // Milieu-gauche
+          document.getElementById('C3').style.display = 'block'; // Haut-droit
+          document.getElementById('C5').style.display = 'block'; // Bas-gauche
+          document.getElementById('C6').style.display = 'block'; // Milieu-droit
+          document.getElementById('C7').style.display = 'block'; // Bas-droit
+          break;
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="lancer()">Lancer</button>
+  <svg width="300px" height="300px" style="background-color: lightgray;">
+    <!-- Positionnement des points pour représenter les faces du dé -->
+    <circle id="C1" cx="50" cy="50" r="20" fill="blue" stroke="black" stroke-width="2" style="display: none;"></circle>   <!-- Haut-gauche -->
+    <circle id="C2" cx="50" cy="150" r="20" fill="white" stroke="black" stroke-width="2" style="display: none;"></circle>  <!-- Milieu-gauche -->
+    <circle id="C3" cx="50" cy="250" r="20" fill="blue" stroke="black" stroke-width="2" style="display: none;"></circle>  <!-- Bas-gauche -->
+    <circle id="C4" cx="150" cy="150" r="20" fill="red" stroke="black" stroke-width="2" style="display: none;"></circle> <!-- Centre -->
+    <circle id="C5" cx="250" cy="50" r="20" fill="blue" stroke="black" stroke-width="2" style="display: none;"></circle>  <!-- Haut-droit -->
+    <circle id="C6" cx="250" cy="150" r="20" fill="white" stroke="black" stroke-width="2" style="display: none;"></circle> <!-- Milieu-droit -->
+    <circle id="C7" cx="250" cy="250" r="20" fill="blue" stroke="black" stroke-width="2" style="display: none;"></circle> <!-- Bas-droit -->
+  </svg>
+</body>
+</html>
 
