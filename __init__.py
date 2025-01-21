@@ -19,9 +19,9 @@ def exo_jack():
 def exo_de():
      return render_template('jeu_de_des_amelioration.html')
 
-@app.route('/jeu_de_des_amelioration')
-def exo_de():
-     return render_template('jeu_de_des_amelioration.html')
+@app.route('/bibliotheque_images')
+def exo_bibliotheque_images():
+     return render_template('bibliotheque_images.html')
   
 key = Fernet.generate_key()
 f = Fernet(key)
