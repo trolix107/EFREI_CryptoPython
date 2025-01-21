@@ -15,6 +15,11 @@ def hello_world():
 def exo_jack():
      return render_template('jack.svg')
   
+@app.route('/jeu_de_des_amelioration')
+def exo_de():
+     return render_template('jeu_de_des_amelioration.html')
+
+  
 key = Fernet.generate_key()
 f = Fernet(key)
 
