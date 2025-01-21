@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function lancer() {
+      // Génère une valeur aléatoire entre 1 et 6
+      var Val = Math.floor(Math.random() * 6) + 1;
+
+      // Cache tous les cercles
+      for (var i = 1; i <= 6; i++) {
+        document.getElementById('C' + i).classList.add('hidden');
+      }
+
+      // Affiche les cercles correspondant à la face du dé
+      switch (Val) {
+        case 1:
+          document.getElementById('C4').classList.remove('hidden'); // Centre
+          break;
+        case 2:
+          document.getElementById('C1').classList.remove('hidden'); // Haut-gauche
+          document.getElementById('C6').classList.remove('hidden'); // Bas-droit
+          break;
+        case 3:
+          document.getElementById('C1').classList.remove('hidden'); // Haut-gauche
+          document.getElementById('C4').classList.remove('hidden'); // Centre
+          document.getElementById('C6').classList.remove('hidden'); // Bas-droit
+          break;
+        case 4:
+          document.getElementById('C1').classList.remove('hidden'); // Haut-gauche
+          document.getElementById('C3').classList.remove('hidden'); // Haut-droit
+          document.getElementById('C5').classList.remove('hidden'); // Bas-gauche
+          document.getElementById('C6').classList.remove('hidden'); // Bas-droit
+          break;
+        case 5:
+          document.getElementById('C1').classList.remove('hidden'); // Haut-gauche
+          document.getElementById('C3').classList.remove('hidden'); // Haut-droit
+          document.getElementById('C4').classList.remove('hidden'); // Centre
+          document.getElementById('C5').classList.remove('hidden'); // Bas-gauche
+          document.getElementById('C6').classList.remove('hidden'); // Bas-droit
+          break;
+        case 6:
+          document.getElementById('C1').classList.remove('hidden'); // Haut-gauche
+          document.getElementById('C2').classList.remove('hidden'); // Milieu-gauche
+          document.getElementById('C3').classList.remove('hidden'); // Haut-droit
+          document.getElementById('C5').classList.remove('hidden'); // Bas-gauche
+          document.getElementById('C6').classList.remove('hidden'); // Bas-droit
+          document.getElementById('C7').classList.remove('hidden'); // Milieu-droit
+          break;
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="lancer()">Lancer</button>
+  <svg width="300px" height="300px" style="background-color: lightgray;">
+    <!-- Définition des cercles pour les 6 faces -->
+    <circle id="C1" cx="50" cy="50" r="20" fill="red" class="hidden"></circle>  <!-- Haut-gauche -->
+    <circle id="C2" cx="50" cy="150" r="20" fill="red" class="hidden"></circle> <!-- Milieu-gauche -->
+    <circle id="C3" cx="50" cy="250" r="20" fill="red" class="hidden"></circle> <!-- Bas-gauche -->
+    <circle id="C4" cx="150" cy="150" r="20" fill="red" class="hidden"></circle> <!-- Centre -->
+    <circle id="C5" cx="250" cy="50" r="20" fill="red" class="hidden"></circle>  <!-- Haut-droit -->
+    <circle id="C6" cx="250" cy="250" r="20" fill="red" class="hidden"></circle> <!-- Bas-droit -->
+    <circle id="C7" cx="250" cy="150" r="20" fill="red" class="hidden"></circle> <!-- Milieu-droit -->
+  </svg>
+</body>
+</html>
 
