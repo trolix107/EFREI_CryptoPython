@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afficher les images</title>
+    <title>Afficher des images depuis GitHub</title>
     <script>
-        // Fonction pour afficher les images en fonction des cases cochées
         function afficherImages() {
-            // Liste des images à vérifier
             var images = [
                 { id: "image1", checkboxId: "checkbox1" },
                 { id: "image2", checkboxId: "checkbox2" },
                 { id: "image3", checkboxId: "checkbox3" }
             ];
 
-            // Parcourt chaque image et affiche ou cache en fonction de la case cochée
             images.forEach(function(item) {
                 var image = document.getElementById(item.id);
                 var checkbox = document.getElementById(item.checkboxId);
 
-                // Affiche l'image si la case est cochée, sinon la cache
                 if (checkbox.checked) {
                     image.style.display = "block";
                 } else {
@@ -31,36 +27,27 @@
 </head>
 <body>
 
-    <h1>Selectionne se que vous souhaitez</h1>
+    <h1>Afficher des images avec des cases à cocher depuis GitHub</h1>
     
-    <!-- Case à cocher pour l'image 1 -->
-    <label for="checkbox1">Image 1</label>
+    <label for="checkbox1">Afficher l'image 1</label>
     <input type="checkbox" id="checkbox1">
     <br>
-
-    <!-- Image 1 -->
-    <img id="image1" src="téléchargement.jpg" alt="Image 1" style="display: none;">
+    <!-- Utilisez le chemin relatif vers l'image -->
+    <img id="image1" src="images/image1.jpg" alt="Image 1" style="display: none;">
     <br>
 
-    <!-- Case à cocher pour l'image 2 -->
-    <label for="checkbox2">Image 2</label>
+    <label for="checkbox2">Afficher l'image 2</label>
     <input type="checkbox" id="checkbox2">
     <br>
-
-    <!-- Image 2 -->
-    <img id="image2" src="640x340_sc_musk.jpg" alt="Image 2" style="display: none;">
+    <img id="image2" src="images/image2.jpg" alt="Image 2" style="display: none;">
     <br>
 
-    <!-- Case à cocher pour l'image 3 -->
-    <label for="checkbox3">Image 3</label>
+    <label for="checkbox3">Afficher l'image 3</label>
     <input type="checkbox" id="checkbox3">
     <br>
-
-    <!-- Image 3 -->
-    <img id="image3" src="images.jpg" alt="Image 3" style="display: none;">
+    <img id="image3" src="images/image3.jpg" alt="Image 3" style="display: none;">
     <br>
 
-    <!-- Bouton pour afficher les images -->
     <button onclick="afficherImages()">Afficher les images sélectionnées</button>
 
 </body>
