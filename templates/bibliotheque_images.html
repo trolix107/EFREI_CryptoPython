@@ -1,54 +1,65 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afficher des images depuis GitHub</title>
+    <title>Bibliothèque d'images</title>
     <script>
-        function afficherImages() {
-            var images = [
-                { id: "image1", checkboxId: "checkbox1" },
-                { id: "image2", checkboxId: "checkbox2" },
-                { id: "image3", checkboxId: "checkbox3" }
-            ];
-
-            images.forEach(function(item) {
-                var image = document.getElementById(item.id);
-                var checkbox = document.getElementById(item.checkboxId);
-
-                if (checkbox.checked) {
-                    image.style.display = "block";
-                } else {
-                    image.style.display = "none";
-                }
-            });
+        function afficherImage(checkboxId, imageId) {
+            const checkbox = document.getElementById(checkboxId);
+            const image = document.getElementById(imageId);
+            if (checkbox.checked) {
+                image.style.display = "block";
+            } else {
+                image.style.display = "none";
+            }
         }
     </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .image-container {
+            margin: 10px 0;
+        }
+
+        img {
+            display: none; /* Masqué par défaut */
+            max-width: 200px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-
-    <h1>Sellectione les images que vous souhaitez</h1>
-    
-    <label for="checkbox1">Image 1</label>
-    <input type="checkbox" id="checkbox1">
-    <br>
-    <!-- Utilisez le chemin relatif vers l'image -->
-    <img src="{{ url_for('static', filename='images/images.jpg') }}" alt="Image 2" style="display: none;">
-    <br>
-
-    <label for="checkbox2">Image 2</label>
-    <input type="checkbox" id="checkbox2">
-    <br>
-    <img id="image2" src="images/image2.jpg" alt="Image 2" style="display: none;">
-    <br>
-
-    <label for="checkbox3">Image 3</label>
-    <input type="checkbox" id="checkbox3">
-    <br>
-    <img id="image3" src="images/image3.jpg" alt="Image 3" style="display: none;">
-    <br>
-
-    <button onclick="afficherImages()">Afficher les images sélectionnées</button>
-
+    <h1>Bibliothèque d'images</h1>
+    <hr />
+    <h2>Choisissez des images à afficher</h2>
+    <div class="image-container">
+        <p>
+            <input type="checkbox" id="checkbox1" onclick="afficherImage('checkbox1', 'image1')">
+            Geda
+        </p>
+        <img id="image1" src="/static/images/images.jpg" alt="Image multiplat">
+    </div>
+    <div class="image-container">
+        <p>
+            <input type="checkbox" id="checkbox2" onclick="afficherImage('checkbox2', 'image2')">
+            Jean-Luc Reichmann
+        </p>
+        <img id="image2" src="/static/images/téléchargement.jpg" alt="Image brad pitt">
+    </div>
+    <div class="image-container">
+        <p>
+            <input type="checkbox" id="checkbox3" onclick="afficherImage('checkbox3', 'image3')">
+            Tyler Mugshot
+        </p>
+        <img id="image3" src="/static/images/640*340_sc_musk.jpg" alt="Image elon musk">
+    </div>
 </body>
 </html>
