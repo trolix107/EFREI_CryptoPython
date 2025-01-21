@@ -3,12 +3,14 @@
 <head>
   <style>
     body {
-      text-align: center;
       font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
     }
 
     button {
-      margin-top: 20px;
       background-color: #6200ea;
       color: white;
       border: none;
@@ -28,6 +30,20 @@
 
     button:active {
       transform: scale(1);
+    }
+
+    svg {
+      display: block;
+      margin: 30px auto;
+      background-color: #e0e0e0;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .dot {
+      fill: #d32f2f;
+      stroke: black;
+      stroke-width: 2;
     }
   </style>
   <script>
@@ -80,16 +96,16 @@
   </script>
 </head>
 <body>
-  <svg width="300px" height="300px" style="background-color: lightgray; margin: 20px auto; display: block;">
+  <svg width="300px" height="300px">
     <!-- Positionnement des points pour représenter les faces du dé -->
-    <circle id="C1" cx="50" cy="50" r="30" fill="blue" stroke="black" stroke-width="2" style="display: none;"></circle>   <!-- Haut-gauche -->
-    <circle id="C2" cx="50" cy="150" r="30" fill="white" stroke="black" stroke-width="2" style="display: none;"></circle>  <!-- Milieu-gauche -->
-    <circle id="C3" cx="50" cy="250" r="30" fill="blue" stroke="black" stroke-width="2" style="display: none;"></circle>  <!-- Bas-gauche -->
-    <circle id="C4" cx="150" cy="150" r="30" fill="red" stroke="black" stroke-width="2" style="display: none;"></circle> <!-- Centre -->
-    <circle id="C5" cx="250" cy="50" r="30" fill="blue" stroke="black" stroke-width="2" style="display: none;"></circle>  <!-- Haut-droit -->
-    <circle id="C6" cx="250" cy="150" r="30" fill="white" stroke="black" stroke-width="2" style="display: none;"></circle> <!-- Milieu-droit -->
-    <circle id="C7" cx="250" cy="250" r="30" fill="blue" stroke="black" stroke-width="2" style="display: none;"></circle> <!-- Bas-droit -->
+    <circle id="C1" cx="75" cy="75" r="20" class="dot" style="display: none;"></circle>   <!-- Haut-gauche -->
+    <circle id="C2" cx="75" cy="150" r="20" class="dot" style="display: none;"></circle>  <!-- Milieu-gauche -->
+    <circle id="C3" cx="75" cy="225" r="20" class="dot" style="display: none;"></circle>  <!-- Bas-gauche -->
+    <circle id="C4" cx="150" cy="150" r="20" class="dot" style="display: none;"></circle> <!-- Centre -->
+    <circle id="C5" cx="225" cy="75" r="20" class="dot" style="display: none;"></circle>  <!-- Haut-droit -->
+    <circle id="C6" cx="225" cy="150" r="20" class="dot" style="display: none;"></circle> <!-- Milieu-droit -->
+    <circle id="C7" cx="225" cy="225" r="20" class="dot" style="display: none;"></circle> <!-- Bas-droit -->
   </svg>
-  <button onclick="lancer()">Lancer</button>
+    <button onclick="lancer()">🎲 Lancer le dé</button>
 </body>
 </html>
