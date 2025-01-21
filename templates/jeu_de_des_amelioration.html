@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f9;
-      margin: 0;
-      padding: 0;
-    }
-
-    button {
-      background-color: #6200ea;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s, background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #3700b3;
-      transform: scale(1.1);
-    }
-
-    button:active {
-      transform: scale(1);
-    }
-
-    svg {
-      display: block;
-      margin: 30px auto;
-      background-color: #e0e0e0;
+-color: #e0e0e0;
       border-radius: 16px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
@@ -44,20 +7,6 @@
       fill: #d32f2f;
       stroke: black;
       stroke-width: 2;
-      opacity: 0; /* Initialement caché */
-      animation: fadeIn 0.5s ease-in-out forwards;
-    }
-
-    /* Animation de clignotement */
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      50% { opacity: 1; }
-      100% { opacity: 0; }
-    }
-
-    /* Ajouter une animation pour chaque cercle */
-    .dot-animate {
-      animation: fadeIn 0.5s ease-in-out forwards;
     }
   </style>
   <script>
@@ -67,71 +16,45 @@
 
       // Réinitialise tous les cercles (les cache)
       for (var i = 1; i <= 7; i++) {
-        let circle = document.getElementById('C' + i);
-        circle.style.display = 'none';
-        circle.classList.remove('dot-animate'); // Retirer l'animation avant de recommencer
+        document.getElementById('C' + i).style.display = 'none';
       }
 
-      // Animation de clignotement des cercles avant de les afficher
-      setTimeout(function() {
-        // Affiche les cercles correspondant à la face du dé
-        switch (Val) {
-          case 1:
-            document.getElementById('C4').style.display = 'block'; // Centre
-            document.getElementById('C4').classList.add('dot-animate');
-            break;
-          case 2:
-            document.getElementById('C1').style.display = 'block'; // Haut-gauche
-            document.getElementById('C7').style.display = 'block'; // Bas-droit
-            document.getElementById('C1').classList.add('dot-animate');
-            document.getElementById('C7').classList.add('dot-animate');
-            break;
-          case 3:
-            document.getElementById('C1').style.display = 'block'; // Haut-gauche
-            document.getElementById('C4').style.display = 'block'; // Centre
-            document.getElementById('C7').style.display = 'block'; // Bas-droit
-            document.getElementById('C1').classList.add('dot-animate');
-            document.getElementById('C4').classList.add('dot-animate');
-            document.getElementById('C7').classList.add('dot-animate');
-            break;
-          case 4:
-            document.getElementById('C1').style.display = 'block'; // Haut-gauche
-            document.getElementById('C3').style.display = 'block'; // Haut-droit
-            document.getElementById('C5').style.display = 'block'; // Bas-gauche
-            document.getElementById('C7').style.display = 'block'; // Bas-droit
-            document.getElementById('C1').classList.add('dot-animate');
-            document.getElementById('C3').classList.add('dot-animate');
-            document.getElementById('C5').classList.add('dot-animate');
-            document.getElementById('C7').classList.add('dot-animate');
-            break;
-          case 5:
-            document.getElementById('C1').style.display = 'block'; // Haut-gauche
-            document.getElementById('C3').style.display = 'block'; // Haut-droit
-            document.getElementById('C4').style.display = 'block'; // Centre
-            document.getElementById('C5').style.display = 'block'; // Bas-gauche
-            document.getElementById('C7').style.display = 'block'; // Bas-droit
-            document.getElementById('C1').classList.add('dot-animate');
-            document.getElementById('C3').classList.add('dot-animate');
-            document.getElementById('C4').classList.add('dot-animate');
-            document.getElementById('C5').classList.add('dot-animate');
-            document.getElementById('C7').classList.add('dot-animate');
-            break;
-          case 6:
-            document.getElementById('C1').style.display = 'block'; // Haut-gauche
-            document.getElementById('C2').style.display = 'block'; // Milieu-gauche
-            document.getElementById('C3').style.display = 'block'; // Haut-droit
-            document.getElementById('C5').style.display = 'block'; // Bas-gauche
-            document.getElementById('C6').style.display = 'block'; // Milieu-droit
-            document.getElementById('C7').style.display = 'block'; // Bas-droit
-            document.getElementById('C1').classList.add('dot-animate');
-            document.getElementById('C2').classList.add('dot-animate');
-            document.getElementById('C3').classList.add('dot-animate');
-            document.getElementById('C5').classList.add('dot-animate');
-            document.getElementById('C6').classList.add('dot-animate');
-            document.getElementById('C7').classList.add('dot-animate');
-            break;
-        }
-      }, 500); // Délai de 500ms avant d'afficher les résultats
+      // Affiche les cercles correspondant à la face du dé
+      switch (Val) {
+        case 1:
+          document.getElementById('C4').style.display = 'block'; // Centre
+          break;
+        case 2:
+          document.getElementById('C1').style.display = 'block'; // Haut-gauche
+          document.getElementById('C7').style.display = 'block'; // Bas-droit
+          break;
+        case 3:
+          document.getElementById('C1').style.display = 'block'; // Haut-gauche
+          document.getElementById('C4').style.display = 'block'; // Centre
+          document.getElementById('C7').style.display = 'block'; // Bas-droit
+          break;
+        case 4:
+          document.getElementById('C1').style.display = 'block'; // Haut-gauche
+          document.getElementById('C3').style.display = 'block'; // Haut-droit
+          document.getElementById('C5').style.display = 'block'; // Bas-gauche
+          document.getElementById('C7').style.display = 'block'; // Bas-droit
+          break;
+        case 5:
+          document.getElementById('C1').style.display = 'block'; // Haut-gauche
+          document.getElementById('C3').style.display = 'block'; // Haut-droit
+          document.getElementById('C4').style.display = 'block'; // Centre
+          document.getElementById('C5').style.display = 'block'; // Bas-gauche
+          document.getElementById('C7').style.display = 'block'; // Bas-droit
+          break;
+        case 6:
+          document.getElementById('C1').style.display = 'block'; // Haut-gauche
+          document.getElementById('C2').style.display = 'block'; // Milieu-gauche
+          document.getElementById('C3').style.display = 'block'; // Haut-droit
+          document.getElementById('C5').style.display = 'block'; // Bas-gauche
+          document.getElementById('C6').style.display = 'block'; // Milieu-droit
+          document.getElementById('C7').style.display = 'block'; // Bas-droit
+          break;
+      }
     }
   </script>
 </head>
@@ -146,6 +69,6 @@
     <circle id="C6" cx="225" cy="150" r="20" class="dot" style="display: none;"></circle> <!-- Milieu-droit -->
     <circle id="C7" cx="225" cy="225" r="20" class="dot" style="display: none;"></circle> <!-- Bas-droit -->
   </svg>
-  <button onclick="lancer()">🎲 Lancer le dé</button>
+    <button onclick="lancer()">🎲 Lancer le dé</button>
 </body>
 </html>
