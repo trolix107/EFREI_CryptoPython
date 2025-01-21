@@ -3,14 +3,21 @@
 <head>
     <title>Bibliothèque d'images</title>
     <script>
-        function afficherImage(checkboxId, imageId) {
-            const checkbox = document.getElementById(checkboxId);
-            const image = document.getElementById(imageId);
-            if (checkbox.checked) {
-                image.style.display = "block";
-            } else {
-                image.style.display = "none";
-            }
+        function afficherImages() {
+            // Récupérer toutes les cases à cocher
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            
+            // Pour chaque case à cocher, afficher ou cacher l'image correspondante
+            checkboxes.forEach(function(checkbox) {
+                var imageId = checkbox.getAttribute('data-image-id');
+                var image = document.getElementById(imageId);
+                
+                if (checkbox.checked) {
+                    image.style.display = "block"; // Afficher l'image si la case est cochée
+                } else {
+                    image.style.display = "none"; // Cacher l'image si la case n'est pas cochée
+                }
+            });
         }
     </script>
     <style>
@@ -31,35 +38,74 @@
 
         img {
             display: none; /* Masqué par défaut */
-            max-width: 200px;
+            max-width: 300px;
             margin-top: 10px;
         }
+
+        button {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #3700b3;
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(1);
+        }
+
+        .checkbox-label {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-container {
+            margin-bottom: 20px;
+        }
+
     </style>
 </head>
 <body>
     <h1>Bibliothèque d'images</h1>
     <hr />
     <h2>Choisissez des images à afficher</h2>
-    <div class="image-container">
-        <p>
-            <input type="checkbox" id="checkbox1" onclick="afficherImage('checkbox1', 'image1')">
+    
+    <div class="checkbox-container">
+        <label class="checkbox-label">
+            <input type="checkbox" id="checkbox1" data-image-id="image1">
             Image 1
-        </p>
+        </label>
         <img id="image1" src="/static/images/images.jpg" alt="Image multiplat">
     </div>
-    <div class="image-container">
-        <p>
-            <input type="checkbox" id="checkbox2" onclick="afficherImage('checkbox2', 'image2')">
+    
+    <div class="checkbox-container">
+        <label class="checkbox-label">
+            <input type="checkbox" id="checkbox2" data-image-id="image2">
             Image 2
-        </p>
+        </label>
         <img id="image2" src="/static/images/téléchargement.jpg" alt="Image brad pitt">
     </div>
-    <div class="image-container">
-        <p>
-            <input type="checkbox" id="checkbox3" onclick="afficherImage('checkbox3', 'image3')">
+    
+    <div class="checkbox-container">
+        <label class="checkbox-label">
+            <input type="checkbox" id="checkbox3" data-image-id="image3">
             Image 3
-        </p>
+        </label>
         <img id="image3" src="/static/images/640*340_sc_musk.jpg" alt="Image elon musk">
     </div>
+
+    <button onclick="afficherImages()">Afficher les images sélectionnées</button>
 </body>
 </html>
