@@ -1,4 +1,3 @@
-
 from cryptography.fernet import Fernet
 from flask import Flask, render_template_string, render_template, jsonify
 from flask import render_template
@@ -10,7 +9,7 @@ app = Flask(__name__)
                                                                                                                                        
 @app.route('/')
 def hello_world():
-    return render_template('jack.svg')
+    return render_template('jeu_de_des.html')
 
 @app.route('/jack')
 def exo_jack():
