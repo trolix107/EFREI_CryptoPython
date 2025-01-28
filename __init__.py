@@ -22,6 +22,10 @@ def exo_de():
 @app.route('/bibliotheque_images')
 def exo_bibliotheque_images():
      return render_template('bibliotheque_images.html')
+
+@app.route('/roulette_russe')
+def exo_roulette_russe():
+     return render_template('roulette_russe.html')
   
 key = Fernet.generate_key()
 f = Fernet(key)
