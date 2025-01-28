@@ -3,12 +3,18 @@
 <head>
 <script>
 function lancer() {
-    // Génère un nombre aléatoire entre 1 et 6
-    const numeroAleatoire = Math.floor(Math.random() * 6) + 1;
+            // Réinitialise les couleurs
+            resetCouleurs();
 
-    // Affiche le nombre aléatoire dans une alerte
-    alert("Le barillet tourne... Résultat : " + numeroAleatoire);
-}
+            // Génère un numéro aléatoire entre 1 et 6
+            const randomNumber = Math.floor(Math.random() * 6) + 1;
+
+            // Colore la chambre correspondante en rouge
+            document.getElementById("Br" + randomNumber).style.fill = "red";
+
+            // Affiche une alerte avec le numéro tiré
+            alert("Le barillet tourne. Chambre numéro : " + randomNumber);
+        }
 
 function afficherChambre(numero) {
     // Affiche le numéro de la chambre cliquée
@@ -23,12 +29,6 @@ function afficherChambre(numero) {
     document.getElementById("Br" + numero).style.fill = "red";
 }
 
- function identifierEtColorerChambre(numero) {
-            resetCouleurs();
-            alert("Chambre numéro " + numero);
-            document.getElementById("Br" + numero).style.fill = "red";
-        }
-   
    
 </script>
 </head>
