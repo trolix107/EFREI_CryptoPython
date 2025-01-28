@@ -3,7 +3,11 @@
 <head>
 <script>
 function lancer() {
-    alert("Le barillet tourne");
+    // Génère un nombre aléatoire entre 1 et 6
+    const numeroAleatoire = Math.floor(Math.random() * 6) + 1;
+
+    // Affiche le nombre aléatoire dans une alerte
+    alert("Le barillet tourne... Résultat : " + numeroAleatoire);
 }
 
 function afficherChambre(numero) {
