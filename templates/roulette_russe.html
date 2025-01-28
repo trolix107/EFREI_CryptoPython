@@ -2,22 +2,33 @@
 <html>
 <head>
 <script>
-function lancer() {
-    alert("Le barillet tourne");
-}
+ function resetCouleurs() {
+            for (let i = 1; i <= 6; i++) {
+                document.getElementById("Br" + i).style.fill = "gray";
+            }
+        }
 
-function afficherChambre(numero) {
-    // Affiche le numéro de la chambre cliquée
-    alert("Vous avez cliqué sur la chambre numéro " + numero);
+        // Fonction pour lancer le barillet
+        function lancer() {
+            // Réinitialise les couleurs
+            resetCouleurs();
 
-    // Réinitialise la couleur de toutes les chambres à gris
-    for (let i = 1; i <= 6; i++) {
-        document.getElementById("Br" + i).style.fill = "gray";
-    }
+            // Génère un numéro aléatoire entre 1 et 6
+            const randomNumber = Math.floor(Math.random() * 6) + 1;
 
-    // Colore la chambre cliquée en rouge
-    document.getElementById("Br" + numero).style.fill = "red";
-}
+            // Colore la chambre correspondante en rouge
+            document.getElementById("Br" + randomNumber).style.fill = "red";
+
+            // Affiche une alerte avec le numéro tiré
+            alert("Le barillet tourne. Chambre numéro : " + randomNumber);
+        }
+
+        // Fonction pour identifier et colorer une chambre manuellement
+        function identifierEtColorerChambre(numero) {
+            resetCouleurs();
+            alert("Chambre numéro " + numero);
+            document.getElementById("Br" + numero).style.fill = "red";
+        }
 
    
 </script>
